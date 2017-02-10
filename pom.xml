@@ -10,6 +10,7 @@
         <module>cloud-data-flow-server</module>
         <module>kafka-boot-app</module>
         <module>task-demo</module>
+        <module>log-sink-kafka</module>
     </modules>
 
     <properties>
