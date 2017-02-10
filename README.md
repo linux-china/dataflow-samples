@@ -13,6 +13,7 @@ $ terraform apply
 ### Startup Data Flow Server
 Run Spring Cloud Data Flow Server Boot Application, then execute dataflow shell.
 ```
+$ jenv repo update
 $ jenv install dataflow 1.1.2
 $ dataflow-shell.sh
 ```
