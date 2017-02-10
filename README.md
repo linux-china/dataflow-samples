@@ -32,6 +32,7 @@ dataflow:> stream create --definition "ticktock | log-sink-kafka" --name ticktoc
 
 dataflow:> stream deploy ticktock-log --properties "app.ticktock.spring.cloud.stream.bindings.output.destination=ticktockTopic,app.log-sink-kafka.spring.cloud.stream.bindings.input.destination=ticktockTopic"
 ```
+
 ### FAQ
 
 * import apps:
@@ -44,6 +45,14 @@ dataflow:> app import --uri http://repo.spring.io/libs-release-local/org/springf
 security.basic.enable: false
 management.security.enabled: false
 ```
+
+* differences between arguments and properties:
+```
+dataflow:> task launch mytask --arguments "--server.port=8080,--foo=bar"
+dataflow:> task launch mytask --properties "app.timestamp.spring.cloud.deployer.foo1=bar1,app.timestamp.foo2=bar2"
+```
+arguments with '--' and properties with pair splitted by comma.
+
 ### Local Demo
 
 ```
