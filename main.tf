@@ -8,3 +8,10 @@ resource "kafka_topic" "testTopic" {
   replication_factor = 1
   cleanup_policy = "compact"
 }
+
+resource "kafka_topic" "ticktockTopic" {
+  name = "ticktockTopic"
+  partitions = 1
+  replication_factor = 1
+  cleanup_policy = "compact"
+}
