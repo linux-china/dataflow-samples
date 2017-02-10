@@ -64,3 +64,5 @@ $ java -jar log-sink-kafka-10-1.1.1.RELEASE.jar --server.port=0 --spring.cloud.s
 
 * Spring Cloud DataFlow: http://cloud.spring.io/spring-cloud-dataflow/
 * Spring Cloud DataFlow Document: http://docs.spring.io/spring-cloud-dataflow/docs/1.2.0.BUILD-SNAPSHOT/reference/htmlsingle/#streams
+* Spring Cloud Stream: https://cloud.spring.io/spring-cloud-stream/
+* Spring Cloud Task: http://cloud.spring.io/spring-cloud-task/
