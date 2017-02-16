@@ -20,6 +20,6 @@ public class DemoTaskApplication {
     @Bean
     public CommandLineRunner commandLineRunner() {
         return args ->
-                System.out.println("Executed at :" + new SimpleDateFormat().format(new Date()));
+                System.out.println("$$$$Executed at :" + new SimpleDateFormat().format(new Date()));
     }
 }
