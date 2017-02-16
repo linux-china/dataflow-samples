@@ -11,3 +11,8 @@ spring:
 
 server:
   port: 9393
+
+maven:
+  remote-repositories:
+     repo1:
+       url: http://repo.spring.io/release/
