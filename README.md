@@ -17,6 +17,13 @@ $ jenv repo update
 $ jenv install dataflow 1.1.2
 $ dataflow-shell.sh
 ```
+### Install DataFlow Shell
+If you use jenv, it's easy as following:
+```
+$ jenv repo update
+$ jenv install dataflow 1.1.2
+$ dataflow-shell.sh
+```
 ### register application
 
 ```
