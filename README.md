@@ -35,9 +35,9 @@ dataflow:> stream deploy ticktock-log --properties "app.ticktock.spring.cloud.st
 
 ### FAQ
 
-* import apps:
+* import apps: please cd stream-apps-download and execute "mvn dependency:resolve" to download all artifacts, then execute import in dataflow shell.
 ```
-dataflow:> app import --uri http://repo.spring.io/libs-release-local/org/springframework/cloud/stream/app/spring-cloud-stream-app-descriptor/Avogadro.RELEASE/spring-cloud-stream-app-descriptor-Avogadro.RELEASE.stream-apps-kafka-10-maven
+dataflow:> app import --uri http://repo.spring.io/libs-release-local/org/springframework/cloud/stream/app/spring-cloud-stream-app-descriptor/Avogadro.SR1/spring-cloud-stream-app-descriptor-Avogadro.SR1.stream-apps-kafka-10-maven
 ```
 
 * Security protection problem. Please add following code in application.properties:
