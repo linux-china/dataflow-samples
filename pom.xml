@@ -11,6 +11,7 @@
         <module>kafka-boot-app</module>
         <module>task-demo</module>
         <module>log-sink-kafka</module>
+        <module>mysqlbinlog-source-kafka</module>
     </modules>
 
     <properties>
