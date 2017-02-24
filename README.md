@@ -14,14 +14,14 @@ $ terraform apply
 Run Spring Cloud Data Flow Server Boot Application, then execute dataflow shell.
 ```
 $ jenv repo update
-$ jenv install dataflow 1.1.2
+$ jenv install dataflow 1.1.4
 $ dataflow-shell.sh
 ```
 ### Install DataFlow Shell
 If you use jenv, it's easy as following:
 ```
 $ jenv repo update
-$ jenv install dataflow 1.1.2
+$ jenv install dataflow 1.1.4 
 $ dataflow-shell.sh
 ```
 ### register application
@@ -59,7 +59,7 @@ management.security.enabled: false
 dataflow:> task launch mytask --arguments "--server.port=8080,--foo=bar"
 dataflow:> task launch mytask --properties "app.timestamp.spring.cloud.deployer.foo1=bar1,app.timestamp.foo2=bar2"
 ```
-arguments with '--' and properties with pair splitted by comma.
+arguments with '--' and properties with pair split by comma.
 
 ### Local Demo
 
