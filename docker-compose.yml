@@ -13,7 +13,7 @@ services:
          MYSQL_ROOT_PASSWORD: 123456
          MYSQL_DATABASE: spring_cloud
   kafka:
-     image: spotify/kafka:0.10.1.1
+     image: spotify/kafka:0.10.2.0
      ports:
        - "2181:2181"
        - "9092:9092"
