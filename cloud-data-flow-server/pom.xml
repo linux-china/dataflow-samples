@@ -17,8 +17,8 @@
     <description>Spring Boot Cloud Data flow Server</description>
 
     <properties>
-        <cloud-dataflow.version>1.1.4.RELEASE</cloud-dataflow.version>
-        <cloud-task.version>1.1.2.RELEASE</cloud-task.version>
+        <cloud-dataflow.version>1.2.0.M3</cloud-dataflow.version>
+        <cloud-task.version>1.2.0.M2</cloud-task.version>
     </properties>
 
     <dependencies>
