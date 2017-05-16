@@ -10,18 +10,25 @@ $ docker-compose up -d
 $ terraform apply
 ```
 
+### Start Spring Cloud Data Flow Local-Server
+
+```
+$ wget http://repo.spring.io/release/org/springframework/cloud/spring-cloud-dataflow-server-local/1.2.0.RELEASE/spring-cloud-dataflow-server-local-1.2.0.RELEASE.jar
+$ java -jar spring-cloud-dataflow-server-local-1.2.0.RELEASE.jar
+
+```
 ### Startup Data Flow Server
 Run Spring Cloud Data Flow Server Boot Application, then execute dataflow shell.
 ```
 $ jenv repo update
-$ jenv install dataflow 1.1.4
+$ jenv install dataflow 1.2.0
 $ dataflow-shell.sh
 ```
 ### Install DataFlow Shell
 If you use jenv, it's easy as following:
 ```
 $ jenv repo update
-$ jenv install dataflow 1.1.4 
+$ jenv install dataflow 1.2.0 
 $ dataflow-shell.sh
 ```
 ### register application
