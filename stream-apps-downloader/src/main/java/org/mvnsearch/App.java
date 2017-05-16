@@ -14,8 +14,8 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
         String[] importUris = new String[]
-                {"http://repo.spring.io/libs-release-local/org/springframework/cloud/task/app/spring-cloud-task-app-descriptor/Addison.RELEASE/spring-cloud-task-app-descriptor-Addison.RELEASE.task-apps-maven",
-                        "http://repo.spring.io/libs-release-local/org/springframework/cloud/stream/app/spring-cloud-stream-app-descriptor/Avogadro.SR1/spring-cloud-stream-app-descriptor-Avogadro.SR1.stream-apps-kafka-10-maven"};
+                {"http://bit.ly/Belmont-GA-task-applications-maven",
+                        "http://bit.ly/Bacon-RELEASE-stream-applications-kafka-10-maven"};
         for (String importUri : importUris) {
             printImportUriDependency(importUri);
         }
@@ -32,10 +32,12 @@ public class App {
     private static void printMavenDependency(String line) {
         String gav = line.substring(line.indexOf("maven://") + 8);
         String[] parts = gav.split(":");
-        System.out.println("<dependency>\n" +
-                "            <groupId>" + parts[0] + "</groupId>\n" +
-                "            <artifactId>" + parts[1] + "</artifactId>\n" +
-                "            <version>" + parts[2] + "</version>\n" +
-                "        </dependency>");
+        if (!parts[2].equals("jar")) {
+            System.out.println("<dependency>\n" +
+                    "            <groupId>" + parts[0] + "</groupId>\n" +
+                    "            <artifactId>" + parts[1] + "</artifactId>\n" +
+                    "            <version>" + parts[2] + "</version>\n" +
+                    "        </dependency>");
+        }
     }
 }
