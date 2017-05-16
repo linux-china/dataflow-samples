@@ -10,13 +10,6 @@ $ docker-compose up -d
 $ terraform apply
 ```
 
-### Start Spring Cloud Data Flow Local-Server
-
-```
-$ wget http://repo.spring.io/release/org/springframework/cloud/spring-cloud-dataflow-server-local/1.2.0.RELEASE/spring-cloud-dataflow-server-local-1.2.0.RELEASE.jar
-$ java -jar spring-cloud-dataflow-server-local-1.2.0.RELEASE.jar
-
-```
 ### Startup Data Flow Server
 Run Spring Cloud Data Flow Server Boot Application, then execute dataflow shell.
 ```
@@ -51,8 +44,8 @@ dataflow:> stream deploy ticktock-log --properties "app.ticktock.spring.cloud.st
 
 * import apps: please cd stream-apps-download and execute "mvn dependency:resolve" to download all artifacts, then execute import in dataflow shell.
 ```
-dataflow:> app import --uri http://repo.spring.io/libs-release-local/org/springframework/cloud/stream/app/spring-cloud-stream-app-descriptor/Avogadro.SR1/spring-cloud-stream-app-descriptor-Avogadro.SR1.stream-apps-kafka-10-maven
-dataflow:> app import --uri http://repo.spring.io/libs-release-local/org/springframework/cloud/task/app/spring-cloud-task-app-descriptor/Addison.RELEASE/spring-cloud-task-app-descriptor-Addison.RELEASE.task-apps-maven
+dataflow:> app import --uri http://bit.ly/Bacon-RELEASE-stream-applications-kafka-10-maven
+dataflow:> app import --uri http://bit.ly/Belmont-GA-task-applications-maven
 ```
 
 * Security protection problem. Please add following code in application.properties:
@@ -71,8 +64,8 @@ arguments with '--' and properties with pair split by comma.
 ### Local Demo
 
 ```
-$ java -jar time-source-kafka-10-1.1.1.RELEASE.jar --server.port=0 --spring.cloud.stream.bindings.output.destination=ticktockTopic
-$ java -jar log-sink-kafka-10-1.1.1.RELEASE.jar --server.port=0 --spring.cloud.stream.bindings.input.destination=ticktockTopic
+$ java -jar time-source-kafka-10-1.2.0.RELEASE.jar --server.port=0 --spring.cloud.stream.bindings.output.destination=ticktockTopic
+$ java -jar log-sink-kafka-10-1.2.0.RELEASE.jar --server.port=0 --spring.cloud.stream.bindings.input.destination=ticktockTopic
 ```
 
 ### References
